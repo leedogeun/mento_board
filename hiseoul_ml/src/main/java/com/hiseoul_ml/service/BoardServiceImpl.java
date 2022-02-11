@@ -14,34 +14,34 @@ import com.hiseoul_ml.model.Result;
 import com.hiseoul_ml.repositories.BoardRepository;
 
 @Service
-public class BoardServiceImpl implements BoardService{
-	private static final org.apache.logging.log4j.Logger 
-	logger = LogManager.getLogger(BoardServiceImpl.class);
+public class BoardServiceImpl implements BoardService {
+	private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(BoardServiceImpl.class);
 	@Autowired
 	BoardRepository repository;
-	
+
 	public Result updateBoard(Board board) {
 		Optional<Board> search = repository.findById(board.getBoardno());
 		Result result = new Result();
-		if(search.isPresent()) {
+		if (search.isPresent()) {
 			board = repository.save(board);
 			result.setPayload(board);
-		}else {
+		} else {
 			result.setError(new ErrorResponse(ServiceResult.NOTEXIST.toString()));
 		}
 		return result;
 	}
+
 	public Result deleteBoard(int boardno) {
 		Result result = new Result();
 		boolean isPresent = repository.findById(boardno).isPresent();
-		if(!isPresent) {
+		if (!isPresent) {
 			result.setError(new ErrorResponse(ServiceResult.NOTEXIST.toString()));
-		}else {
+		} else {
 			repository.deleteById(boardno);
 		}
 		return result;
 	}
-	
+
 	@Override
 	public Result createBoard(Board board) {
 		board = repository.save(board);
@@ -49,7 +49,7 @@ public class BoardServiceImpl implements BoardService{
 		result.setPayload(board);
 		return result;
 	}
-	
+
 	@Override
 	public Result retrieveBoardList() {
 		List<Board> list = repository.findAllByOrderByBoardnoDesc();
@@ -57,14 +57,14 @@ public class BoardServiceImpl implements BoardService{
 		result.setPayload(list);
 		return result;
 	}
-	
+
 	@Override
 	public Result retrieveBoard(int boardno) {
 		Optional<Board> optionalBoard = repository.findById(boardno);
 		Result result = new Result();
-		if(optionalBoard.isPresent()) {
+		if (optionalBoard.isPresent()) {
 			result.setPayload(optionalBoard.get());
-		}else {
+		} else {
 			result.setError(new ErrorResponse(ServiceResult.NOTEXIST.toString()));
 		}
 		return result;
