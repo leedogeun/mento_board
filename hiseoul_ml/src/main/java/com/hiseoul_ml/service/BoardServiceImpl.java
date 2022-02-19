@@ -20,7 +20,7 @@ public class BoardServiceImpl implements BoardService {
 	BoardRepository repository;
 
 	public Result updateBoard(Board board) {
-		Optional<Board> search = repository.findById(board.getBoardno());
+		Optional<Board> search = repository.findById(board.getNo());
 		Result result = new Result();
 		if (search.isPresent()) {
 			board = repository.save(board);
@@ -31,13 +31,13 @@ public class BoardServiceImpl implements BoardService {
 		return result;
 	}
 
-	public Result deleteBoard(int boardno) {
+	public Result deleteBoard(int no) {
 		Result result = new Result();
-		boolean isPresent = repository.findById(boardno).isPresent();
+		boolean isPresent = repository.findById(no).isPresent();
 		if (!isPresent) {
 			result.setError(new ErrorResponse(ServiceResult.NOTEXIST.toString()));
 		} else {
-			repository.deleteById(boardno);
+			repository.deleteById(no);
 		}
 		return result;
 	}
@@ -52,15 +52,15 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public Result retrieveBoardList() {
-		List<Board> list = repository.findAllByOrderByBoardnoDesc();
+		List<Board> list = repository.findAllByOrderByNoDesc();
 		Result result = new Result();
 		result.setPayload(list);
 		return result;
 	}
 
 	@Override
-	public Result retrieveBoard(int boardno) {
-		Optional<Board> optionalBoard = repository.findById(boardno);
+	public Result retrieveBoard(int no) {
+		Optional<Board> optionalBoard = repository.findById(no);
 		Result result = new Result();
 		if (optionalBoard.isPresent()) {
 			result.setPayload(optionalBoard.get());

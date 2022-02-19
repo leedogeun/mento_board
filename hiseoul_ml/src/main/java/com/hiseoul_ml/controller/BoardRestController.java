@@ -33,9 +33,9 @@ public class BoardRestController {
 		return result;
 	}
 
-	@GetMapping("{boardno}")
-	public Result retrieveBoard(@PathVariable Integer boardno) {
-		Result result = boardService.retrieveBoard(boardno);
+	@GetMapping("{no}")
+	public Result retrieveBoard(@PathVariable Integer no) {
+		Result result = boardService.retrieveBoard(no);
 		return result;
 	}
 
@@ -52,8 +52,8 @@ public class BoardRestController {
 	}
 
 	@DeleteMapping
-	public Result deleteBoard(@RequestParam int boardno) {
-		Result result = boardService.deleteBoard(boardno);
+	public Result deleteBoard(@RequestParam int no) {
+		Result result = boardService.deleteBoard(no);
 		return result;
 	}
 

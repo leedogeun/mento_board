@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import com.hiseoul_ml.model.Board;
 
+
 @Repository
 public interface BoardRepository extends JpaRepository<Board, Integer> {
-	public List<Board> findAllByOrderByBoardnoDesc();
+	public List<Board> findAllByOrderByNoDesc();
 }

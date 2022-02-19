@@ -1,5 +1,7 @@
 package com.hiseoul_ml.model;
 
+import java.security.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,39 +13,112 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="chez_board")
+@Table(name = "tb_member")
 @Getter
 @Setter
 @ToString
-public class Board{
+public class Board {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer boardno;
-	private String title;
-	private String contents;
-	private String writer;
-	public String getContent() {
-		return contents;
+
+	private Integer no;
+	private String id;
+	private String pass;
+	private String name;
+	private String email;
+	private String instance_yn;
+	private Timestamp write_date;
+	private Timestamp up_date;
+	private String active_yn;
+	private String permission;
+	private String auth;
+
+	public Integer getNo() {
+		return no;
 	}
-	public void setBoardno(Integer boardno) {
-		this.boardno = boardno;
+
+	public void setNo(Integer no) {
+		this.no = no;
 	}
-	public Integer getBoardno() {
-		return boardno;
+
+	public String getId() {
+		return id;
 	}
-	public void setContent(String content) {
-		this.contents = content;
+
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getTitle() {
-		return title;
+
+	public String getPass() {
+		return pass;
 	}
-	public void setTitle(String title){
-		this.title = title;
+
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
-	public String getWriter() {
-		return writer;
+
+	public String getName() {
+		return name;
 	}
-	public void setWriter(String writer) {
-		this.writer =writer;
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getInstance_yn() {
+		return instance_yn;
+	}
+
+	public void setInstance_yn(String instance_yn) {
+		this.instance_yn = instance_yn;
+	}
+
+	public Timestamp getWrite_date() {
+		return write_date;
+	}
+
+	public void setWrite_date(Timestamp write_date) {
+		this.write_date = write_date;
+	}
+
+	public Timestamp getUp_date() {
+		return up_date;
+	}
+
+	public void setUp_date(Timestamp up_date) {
+		this.up_date = up_date;
+	}
+
+	public String getActive_yn() {
+		return active_yn;
+	}
+
+	public void setActive_yn(String active_yn) {
+		this.active_yn = active_yn;
+	}
+
+	public String getPermission() {
+		return permission;
+	}
+
+	public void setPermission(String permission) {
+		this.permission = permission;
+	}
+
+	public String getAuth() {
+		return auth;
+	}
+
+	public void setAuth(String auth) {
+		this.auth = auth;
+	}
+
 }
