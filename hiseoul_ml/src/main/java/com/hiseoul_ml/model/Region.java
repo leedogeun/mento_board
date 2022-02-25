@@ -1,7 +1,6 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
