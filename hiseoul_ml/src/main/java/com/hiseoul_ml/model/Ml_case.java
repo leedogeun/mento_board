@@ -1,6 +1,7 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,24 +22,24 @@ public class Ml_case {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private String ml_case_uuid;
+	private UUID ml_case_uuid;
+	private UUID ml_case_region_uuid;
+	private UUID ml_case_cctv_uuid;
+	private UUID ml_case_biz_model_uuid;
 	private String ml_case_name;
 	private String ml_case_type;
 	private String ml_case_count;
 	private String ml_case_pre_count;
-	private String ml_case_region_uuid;
-	private String ml_case_cctv_uuid;
-	private String ml_case_biz_model_uuid;
 	private String ml_case_ml_number;
 	private Timestamp ml_case_write_date;
 	private Timestamp ml_case_update_date;
 	private String ml_case_use_yn;
 
-	public String getMl_case_uuid() {
+	public UUID getMl_case_uuid() {
 		return ml_case_uuid;
 	}
 
-	public void setMl_case_uuid(String ml_case_uuid) {
+	public void setMl_case_uuid(UUID ml_case_uuid) {
 		this.ml_case_uuid = ml_case_uuid;
 	}
 
@@ -74,27 +75,27 @@ public class Ml_case {
 		this.ml_case_pre_count = ml_case_pre_count;
 	}
 
-	public String getMl_case_region_uuid() {
+	public UUID getMl_case_region_uuid() {
 		return ml_case_region_uuid;
 	}
 
-	public void setMl_case_region_uuid(String ml_case_region_uuid) {
+	public void setMl_case_region_uuid(UUID ml_case_region_uuid) {
 		this.ml_case_region_uuid = ml_case_region_uuid;
 	}
 
-	public String getMl_case_cctv_uuid() {
+	public UUID getMl_case_cctv_uuid() {
 		return ml_case_cctv_uuid;
 	}
 
-	public void setMl_case_cctv_uuid(String ml_case_cctv_uuid) {
+	public void setMl_case_cctv_uuid(UUID ml_case_cctv_uuid) {
 		this.ml_case_cctv_uuid = ml_case_cctv_uuid;
 	}
 
-	public String getMl_case_biz_model_uuid() {
+	public UUID getMl_case_biz_model_uuid() {
 		return ml_case_biz_model_uuid;
 	}
 
-	public void setMl_case_biz_model_uuid(String ml_case_biz_model_uuid) {
+	public void setMl_case_biz_model_uuid(UUID ml_case_biz_model_uuid) {
 		this.ml_case_biz_model_uuid = ml_case_biz_model_uuid;
 	}
 

@@ -1,6 +1,7 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +22,7 @@ public class Cctv_info {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private String cctv_uuid;
+	private UUID cctv_uuid;
 	private String cctv_name;
 	private String cctv_type;
 	private String cctv_model;
@@ -33,11 +34,11 @@ public class Cctv_info {
 	private String cctv_use_yn;
 	private String cctv_active_status;
 
-	public String getCctv_uuid() {
+	public UUID getCctv_uuid() {
 		return cctv_uuid;
 	}
 
-	public void setCctv_uuid(String cctv_uuid) {
+	public void setCctv_uuid(UUID cctv_uuid) {
 		this.cctv_uuid = cctv_uuid;
 	}
 

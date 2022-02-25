@@ -1,6 +1,7 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +22,7 @@ public class Region {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private String region_uuid;
+	private UUID region_uuid;
 	private String region_name;
 	private String region_type;
 	private String region_address;
@@ -34,11 +35,11 @@ public class Region {
 	private Timestamp region_update_date;
 	private String region_use_yn;
 
-	public String getRegion_uuid() {
+	public UUID getRegion_uuid() {
 		return region_uuid;
 	}
 
-	public void setRegion_uuid(String region_uuid) {
+	public void setRegion_uuid(UUID region_uuid) {
 		this.region_uuid = region_uuid;
 	}
 
