@@ -22,7 +22,7 @@ public class Region {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private UUID region_uuid;
+	private String region_uuid;
 	private String region_name;
 	private String region_type;
 	private String region_address;
@@ -35,20 +35,20 @@ public class Region {
 	private Timestamp region_update_date;
 	private String region_use_yn;
 
-	public UUID getRegion_uuid() {
-		return region_uuid;
-	}
-
-	public void setRegion_uuid(UUID region_uuid) {
-		this.region_uuid = region_uuid;
-	}
-
 	public String getRegion_name() {
 		return region_name;
 	}
 
 	public void setRegion_name(String region_name) {
 		this.region_name = region_name;
+	}
+
+	public String getRegion_uuid() {
+		return region_uuid;
+	}
+
+	public void setRegion_uuid(String region_uuid) {
+		this.region_uuid = region_uuid;
 	}
 
 	public String getRegion_type() {

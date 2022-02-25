@@ -1,7 +1,6 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +21,7 @@ public class Biz_model {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private UUID biz_model_uuid;
+	private String biz_model_uuid;
 	private String biz_model_name;
 	private String biz_model_type;
 	private String biz_model_contents;
@@ -30,11 +29,11 @@ public class Biz_model {
 	private Timestamp biz_model_update_date;
 	private String biz_model_use_yn;
 
-	public UUID getBiz_model_uuid() {
+	public String getBiz_model_uuid() {
 		return biz_model_uuid;
 	}
 
-	public void setBiz_model_uuid(UUID biz_model_uuid) {
+	public void setBiz_model_uuid(String biz_model_uuid) {
 		this.biz_model_uuid = biz_model_uuid;
 	}
 
