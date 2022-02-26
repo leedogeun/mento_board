@@ -27,7 +27,7 @@ public class RegionServiceImpl implements RegionService {
 
 	@Override
 	public Result retrieveRegionList() {
-		List<Region> list = repository.findAllByOrderByRegion_uuidDesc();
+		List<Region> list = repository.findAllByOrderByRegionUuidDesc();
 		Result result = new Result();
 		result.setPayload(list);
 		return result;
@@ -47,7 +47,7 @@ public class RegionServiceImpl implements RegionService {
 
 	@Override
 	public Result updateRegion(Region region) {
-		Optional<Region> search = repository.findById(region.getRegion_uuid());
+		Optional<Region> search = repository.findById(region.getRegionUuid());
 		Result result = new Result();
 		if (search.isPresent()) {
 			region = repository.save(region);

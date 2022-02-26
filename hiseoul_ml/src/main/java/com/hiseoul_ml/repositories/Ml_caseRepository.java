@@ -8,6 +8,6 @@ import com.hiseoul_ml.model.Ml_case;
 
 @Repository
 public interface Ml_caseRepository extends JpaRepository<Ml_case, String> {
-	public List<Ml_case> findAllByOrderByML_case_uuidDesc();
+	public List<Ml_case> findAllByOrderByMlCaseUuidDesc();
 
 }

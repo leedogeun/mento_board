@@ -21,7 +21,7 @@ public class Biz_model {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	@Column(name = "biz_model_uuid")
-	private String biz_model_uuid;
+	private String bizModelUuid;
 	
 	private String biz_model_name;
 	private String biz_model_type;
@@ -30,12 +30,12 @@ public class Biz_model {
 	private Timestamp biz_model_update_date;
 	private String biz_model_use_yn;
 
-	public String getBiz_model_uuid() {
-		return biz_model_uuid;
+	public String getBizModelUuid() {
+		return bizModelUuid;
 	}
 
-	public void setBiz_model_uuid(String biz_model_uuid) {
-		this.biz_model_uuid = biz_model_uuid;
+	public void setBizModelUuid(String bizModelUuid) {
+		this.bizModelUuid = bizModelUuid;
 	}
 
 	public String getBiz_model_name() {

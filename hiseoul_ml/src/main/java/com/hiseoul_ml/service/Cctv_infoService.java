@@ -8,9 +8,9 @@ public interface Cctv_infoService {
 
 	public Result retrieveCctvinfoList();
 
-	public Result retrieveCctvinfo(String cctv_uuid);
+	public Result retrieveCctvinfo(String cctvUuid);
 
 	public Result updateCctvinfo(Cctv_info cctvinfo);
 
-	public Result deleteCctvinfo(String cctv_uuid);
+	public Result deleteCctvinfo(String cctvUuid);
 }

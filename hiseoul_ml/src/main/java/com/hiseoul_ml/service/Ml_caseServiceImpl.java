@@ -27,7 +27,7 @@ public class Ml_caseServiceImpl implements Ml_caseService {
 
 	@Override
 	public Result retrieveMl_caseList() {
-		List<Ml_case> list = repository.findAllByOrderByML_case_uuidDesc();
+		List<Ml_case> list = repository.findAllByOrderByMlCaseUuidDesc();
 		Result result = new Result();
 		result.setPayload(list);
 		return result;
@@ -47,7 +47,7 @@ public class Ml_caseServiceImpl implements Ml_caseService {
 
 	@Override
 	public Result updateMl_case(Ml_case ml_case) {
-		Optional<Ml_case> search = repository.findById(ml_case.getMl_case_cctv_uuid());
+		Optional<Ml_case> search = repository.findById(ml_case.getMlCaseCctvUuid());
 		Result result = new Result();
 		if (search.isPresent()) {
 			ml_case = repository.save(ml_case);

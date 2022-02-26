@@ -11,5 +11,5 @@ import com.hiseoul_ml.model.Biz_model;
 
 @Repository
 public interface Biz_modelRepository extends JpaRepository<Biz_model, String> {
-	public List<Biz_model> findAllByOrderByBiz_model_uuidDesc();
+	public List<Biz_model> findAllByOrderByBizModelUuidDesc();
 }

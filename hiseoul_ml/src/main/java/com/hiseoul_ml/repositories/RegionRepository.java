@@ -6,9 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import com.hiseoul_ml.model.Region;
 
-
 @Repository
 public interface RegionRepository extends JpaRepository<Region, String> {
-	public List<Region> findAllByOrderByRegion_uuidDesc();
+	public List<Region> findAllByOrderByRegionUuidDesc();
 
 }

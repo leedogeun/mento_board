@@ -11,7 +11,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "tb_member")
+@Table(name = "chez_board")
 @Getter
 @Setter
 @ToString
@@ -20,8 +20,6 @@ public class Board {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private Integer no;
-	private String id;
-	private String pass;
 	private String name;
 	private String email;
 	private String instance_yn;
@@ -37,22 +35,6 @@ public class Board {
 
 	public void setNo(Integer no) {
 		this.no = no;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getPass() {
-		return pass;
-	}
-
-	public void setPass(String pass) {
-		this.pass = pass;
 	}
 
 	public String getName() {

@@ -9,6 +9,6 @@ import com.hiseoul_ml.model.Cctv_info;
 
 @Repository
 public interface CctvInfoRepository extends JpaRepository<Cctv_info, String> {
-	public List<Cctv_info> findAllByOrderByCctv_uuidDesc();
+	public List<Cctv_info> findAllByOrderByCctvUuidDesc();
 
 }

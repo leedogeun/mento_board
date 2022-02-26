@@ -21,7 +21,7 @@ public class CctvInfoServiceImpl implements Cctv_infoService {
 
 	@Override
 	public Result updateCctvinfo(Cctv_info cctvinfo) {
-		Optional<Cctv_info> search = repository.findById(cctvinfo.getCctv_uuid());
+		Optional<Cctv_info> search = repository.findById(cctvinfo.getCctvUuid());
 		Result result = new Result();
 		if (search.isPresent()) {
 			cctvinfo = repository.save(cctvinfo);
@@ -53,7 +53,7 @@ public class CctvInfoServiceImpl implements Cctv_infoService {
 
 	@Override
 	public Result retrieveCctvinfoList() {
-		List<Cctv_info> list = repository.findAllByOrderByCctv_uuidDesc();
+		List<Cctv_info> list = repository.findAllByOrderByCctvUuidDesc();
 		Result result = new Result();
 		result.setPayload(list);
 		return result;

@@ -7,6 +7,6 @@ import com.hiseoul_ml.model.Member;
 
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Integer> {
-	public List<Member> findAllByOrderBynoDesc();
+	public List<Member> findAllByOrderByNoDesc();
 
 }

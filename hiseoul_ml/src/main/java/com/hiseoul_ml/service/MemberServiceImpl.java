@@ -27,7 +27,7 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public Result retrieveMemberList() {
-		List<Member> list = repository.findAllByOrderBynoDesc();
+		List<Member> list = repository.findAllByOrderByNoDesc();
 		Result result = new Result();
 		result.setPayload(list);
 		return result;

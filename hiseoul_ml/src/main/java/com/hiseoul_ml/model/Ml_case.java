@@ -21,23 +21,19 @@ import lombok.ToString;
 public class Ml_case {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-		
+
 	@Column(name = "ml_case_uuid")
-	private String ml_case_uuid;
-//	UUID mlcaseuuid;
-	
+	private String mlCaseUuid;
+
 	@Column(name = "ml_case_region_uuid")
-	private String ml_case_region_uuid;
-//	UUID ml_caseregionuuid;
-	
+	private String mlCaseRegionUuid;
+
 	@Column(name = "ml_case_cctv_uuid")
-	private String ml_case_cctv_uuid;
-//	UUID ml_casecctvuuid;
-	
+	private String mlCaseCctvUuid;
+
 	@Column(name = "ml_case_biz_model_uuid")
-	private String ml_case_biz_model_uuid;
-//	UUID mlcasebizmodeluuid;
-	
+	private String mlCaseBizModelUuid;
+
 	private String ml_case_name;
 	private String ml_case_type;
 	private String ml_case_count;
@@ -47,36 +43,36 @@ public class Ml_case {
 	private Timestamp ml_case_update_date;
 	private String ml_case_use_yn;
 
-	public String getMl_case_uuid() {
-		return ml_case_uuid;
+	public String getMlCaseUuid() {
+		return mlCaseUuid;
 	}
 
-	public void setMl_case_uuid(String ml_case_uuid) {
-		this.ml_case_uuid = ml_case_uuid;
+	public void setMlCaseUuid(String mlCaseUuid) {
+		this.mlCaseUuid = mlCaseUuid;
 	}
 
-	public String getMl_case_region_uuid() {
-		return ml_case_region_uuid;
+	public String getMlCaseRegionUuid() {
+		return mlCaseRegionUuid;
 	}
 
-	public void setMl_case_region_uuid(String ml_case_region_uuid) {
-		this.ml_case_region_uuid = ml_case_region_uuid;
+	public void setMlCaseRegionUuid(String mlCaseRegionUuid) {
+		this.mlCaseRegionUuid = mlCaseRegionUuid;
 	}
 
-	public String getMl_case_cctv_uuid() {
-		return ml_case_cctv_uuid;
+	public String getMlCaseCctvUuid() {
+		return mlCaseCctvUuid;
 	}
 
-	public void setMl_case_cctv_uuid(String ml_case_cctv_uuid) {
-		this.ml_case_cctv_uuid = ml_case_cctv_uuid;
+	public void setMlCaseCctvUuid(String mlCaseCctvUuid) {
+		this.mlCaseCctvUuid = mlCaseCctvUuid;
 	}
 
-	public String getMl_case_biz_model_uuid() {
-		return ml_case_biz_model_uuid;
+	public String getMlCaseBizModelUuid() {
+		return mlCaseBizModelUuid;
 	}
 
-	public void setMl_case_biz_model_uuid(String ml_case_biz_model_uuid) {
-		this.ml_case_biz_model_uuid = ml_case_biz_model_uuid;
+	public void setMlCaseBizModelUuid(String mlCaseBizModelUuid) {
+		this.mlCaseBizModelUuid = mlCaseBizModelUuid;
 	}
 
 	public String getMl_case_name() {

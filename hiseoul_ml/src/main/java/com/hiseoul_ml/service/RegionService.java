@@ -8,9 +8,9 @@ public interface RegionService {
 
 	public Result retrieveRegionList();
 
-	public Result retrieveRegion(String region_uuid);
+	public Result retrieveRegion(String regionUuid);
 
 	public Result updateRegion(Region region);
 
-	public Result deleteRegion(String region_uuid);
+	public Result deleteRegion(String regionUuid);
 }

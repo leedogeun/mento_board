@@ -27,7 +27,7 @@ public class Biz_modelServiceImpl implements Biz_modelService {
 
 	@Override
 	public Result retrieveBiz_modelList() {
-		List<Biz_model> list = repository.findAllByOrderByBiz_model_uuidDesc();
+		List<Biz_model> list = repository.findAllByOrderByBizModelUuidDesc();
 		Result result = new Result();
 		result.setPayload(list);
 		return result;
@@ -47,7 +47,7 @@ public class Biz_modelServiceImpl implements Biz_modelService {
 
 	@Override
 	public Result updateBiz_model(Biz_model biz_model) {
-		Optional<Biz_model> search = repository.findById(biz_model.getBiz_model_uuid());
+		Optional<Biz_model> search = repository.findById(biz_model.getBizModelUuid());
 		Result result = new Result();
 		if (search.isPresent()) {
 			biz_model = repository.save(biz_model);

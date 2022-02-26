@@ -8,9 +8,9 @@ public interface Ml_caseService {
 
 	public Result retrieveMl_caseList();
 
-	public Result retrieveMl_case(String ml_case_uuid);
+	public Result retrieveMl_case(String mlCaseUuid);
 
 	public Result updateMl_case(Ml_case ml_case);
 
-	public Result deleteMl_case(String ml_case_uuid);
+	public Result deleteMl_case(String mlCaseUuid);
 }
