@@ -22,9 +22,9 @@ public class Cctv_info {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	private String cctv_uuid;
 	@Column(name = "cctv_uuid")
-	UUID cctvuuid;
+	private String cctv_uuid;
+	
 	private String cctv_name;
 	private String cctv_type;
 	private String cctv_model;

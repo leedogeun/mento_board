@@ -1,15 +1,12 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -24,7 +21,6 @@ public class Biz_model {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	@Column(name = "biz_model_uuid")
-	UUID bizmodeluuid;
 	private String biz_model_uuid;
 	
 	private String biz_model_name;

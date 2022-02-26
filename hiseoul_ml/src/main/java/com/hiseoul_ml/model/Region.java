@@ -22,7 +22,9 @@ public class Region {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
+	@Column(name = "region_uuid")
 	private String region_uuid;
+//	UUID regionuuid;
 	private String region_name;
 	private String region_type;
 	private String region_address;
@@ -35,8 +37,6 @@ public class Region {
 	private Timestamp region_update_date;
 	private String region_use_yn;
 	
-	@Column(name = "region_uuid")
-	UUID regionuuid;
 	
 	public String getRegion_name() {
 		return region_name;
