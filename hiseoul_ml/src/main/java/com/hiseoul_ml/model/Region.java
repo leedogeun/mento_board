@@ -1,13 +1,14 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
+import java.util.UUID;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -33,7 +34,10 @@ public class Region {
 	private Timestamp region_write_date;
 	private Timestamp region_update_date;
 	private String region_use_yn;
-
+	
+	@Column(name = "region_uuid")
+	UUID regionuuid;
+	
 	public String getRegion_name() {
 		return region_name;
 	}

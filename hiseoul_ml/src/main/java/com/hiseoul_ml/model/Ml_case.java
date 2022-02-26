@@ -1,6 +1,9 @@
 package com.hiseoul_ml.model;
 
 import java.security.Timestamp;
+import java.util.UUID;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,11 +21,23 @@ import lombok.ToString;
 public class Ml_case {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
+		
+	@Column(name = "ml_case_uuid")
+	UUID mlcaseuuid;
 	private String ml_case_uuid;
+	
+	@Column(name = "ml_case_region_uuid")
+	UUID ml_caseregionuuid;
 	private String ml_case_region_uuid;
+	
+	@Column(name = "ml_case_cctv_uuid")
+	UUID ml_casecctvuuid;
 	private String ml_case_cctv_uuid;
+	
+	@Column(name = "ml_case_biz_model_uuid")
+	UUID mlcasebizmodeluuid;
 	private String ml_case_biz_model_uuid;
+	
 	private String ml_case_name;
 	private String ml_case_type;
 	private String ml_case_count;
