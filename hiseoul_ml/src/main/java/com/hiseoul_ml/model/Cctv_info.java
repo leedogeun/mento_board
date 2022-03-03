@@ -1,17 +1,12 @@
 package com.hiseoul_ml.model;
 
-import java.security.Timestamp;
-import java.sql.Date;
-import java.util.UUID;
-
+import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.xml.crypto.Data;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -34,8 +29,8 @@ public class Cctv_info {
 	private String cctv_product_company;
 	private String cctv_resolution;
 	private String cctv_marker;
-	private Date cctv_write_date;
-	private Date cctv_update_date;
+	private Timestamp cctv_write_date;
+	private Timestamp cctv_update_date;
 	private String cctv_use_yn;
 	private String cctv_active_status;
 
@@ -95,20 +90,19 @@ public class Cctv_info {
 		this.cctv_marker = cctv_marker;
 	}
 
-
-	public Date getCctv_write_date() {
+	public Timestamp getCctv_write_date() {
 		return cctv_write_date;
 	}
 
-	public void setCctv_write_date(Date cctv_write_date) {
+	public void setCctv_write_date(Timestamp cctv_write_date) {
 		this.cctv_write_date = cctv_write_date;
 	}
 
-	public Date getCctv_update_date() {
+	public Timestamp getCctv_update_date() {
 		return cctv_update_date;
 	}
 
-	public void setCctv_update_date(Date cctv_update_date) {
+	public void setCctv_update_date(Timestamp cctv_update_date) {
 		this.cctv_update_date = cctv_update_date;
 	}
 
