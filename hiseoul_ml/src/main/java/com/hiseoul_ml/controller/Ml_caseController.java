@@ -38,6 +38,12 @@ public class Ml_caseController {
 		Result result = mlcaseService.retrieveMl_case(mlCaseUuid);
 		return result;
 	}
+	
+	@GetMapping("find/{Uuid}")
+	public Result findUuid(@PathVariable String Uuid) {
+		Result result = mlcaseService.findUuid(Uuid);
+		return result;
+	}
 
 	@PostMapping
 	public Result createMl_case(@ModelAttribute Ml_case ml_case) {

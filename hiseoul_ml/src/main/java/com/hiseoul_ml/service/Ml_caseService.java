@@ -9,6 +9,8 @@ public interface Ml_caseService {
 	public Result retrieveMl_caseList();
 
 	public Result retrieveMl_case(String mlCaseUuid);
+	
+	public Result findUuid(String Uuid);
 
 	public Result updateMl_case(Ml_case ml_case);
 

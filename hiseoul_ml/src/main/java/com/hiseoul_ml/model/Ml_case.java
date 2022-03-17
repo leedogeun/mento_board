@@ -43,6 +43,8 @@ public class Ml_case {
 	private Timestamp ml_case_update_date;
 	private String ml_case_use_yn;
 
+	
+	
 	public String getMlCaseUuid() {
 		return mlCaseUuid;
 	}
