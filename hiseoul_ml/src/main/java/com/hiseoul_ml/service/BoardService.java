@@ -8,9 +8,9 @@ public interface BoardService {
 
 	public Result retrieveBoardList();
 
-	public Result retrieveBoard(int no);
+	public Result retrieveBoard(int boardno);
 
 	public Result updateBoard(Board board);
 
-	public Result deleteBoard(int no);
+	public Result deleteBoard(int boardno);
 }

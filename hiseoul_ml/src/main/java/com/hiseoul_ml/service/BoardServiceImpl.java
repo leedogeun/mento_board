@@ -20,7 +20,7 @@ public class BoardServiceImpl implements BoardService {
 	BoardRepository repository;
 
 	public Result updateBoard(Board board) {
-		Optional<Board> search = repository.findById(board.getNo());
+		Optional<Board> search = repository.findById(board.getBoardno());
 		Result result = new Result();
 		if (search.isPresent()) {
 			board = repository.save(board);
@@ -31,13 +31,13 @@ public class BoardServiceImpl implements BoardService {
 		return result;
 	}
 
-	public Result deleteBoard(int no) {
+	public Result deleteBoard(int boardno) {
 		Result result = new Result();
-		boolean isPresent = repository.findById(no).isPresent();
+		boolean isPresent = repository.findById(boardno).isPresent();
 		if (!isPresent) {
 			result.setError(new ErrorResponse(ServiceResult.NOTEXIST.toString()));
 		} else {
-			repository.deleteById(no);
+			repository.deleteById(boardno);
 		}
 		return result;
 	}
@@ -50,17 +50,18 @@ public class BoardServiceImpl implements BoardService {
 		return result;
 	}
 
+	// 게시판 전체 글 불러 오기 -> 페이징 처리시 바뀌어야 함
 	@Override
 	public Result retrieveBoardList() {
-		List<Board> list = repository.findAllByOrderByNoDesc();
+		List<Board> list = repository.findAll();
 		Result result = new Result();
 		result.setPayload(list);
 		return result;
 	}
 
 	@Override
-	public Result retrieveBoard(int no) {
-		Optional<Board> optionalBoard = repository.findById(no);
+	public Result retrieveBoard(int boardno) {
+		Optional<Board> optionalBoard = repository.findById(boardno);
 		Result result = new Result();
 		if (optionalBoard.isPresent()) {
 			result.setPayload(optionalBoard.get());

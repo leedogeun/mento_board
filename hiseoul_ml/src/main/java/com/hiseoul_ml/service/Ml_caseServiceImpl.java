@@ -27,10 +27,11 @@ public class Ml_caseServiceImpl implements Ml_caseService {
 
 	@Override
 	public Result findUuid(String Uuid) {
-		List<Ml_case> list = repository.findAllByUuid(Uuid);
-		Result result = new Result();
-		result.setPayload(list);
-		return result;
+//		List<Ml_case> list = repository.findAllByUuid(Uuid);
+//		Result result = new Result();
+//		result.setPayload(list);
+//		return result;
+		return null;
 	}
 
 	@Override

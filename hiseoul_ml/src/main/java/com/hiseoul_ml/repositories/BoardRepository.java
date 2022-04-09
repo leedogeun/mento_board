@@ -10,5 +10,5 @@ import com.hiseoul_ml.model.Board;
 
 @Repository
 public interface BoardRepository extends JpaRepository<Board, Integer> {
-	public List<Board> findAllByOrderByNoDesc();
+//	public List<Board> findByBoardno(boardno);
 }

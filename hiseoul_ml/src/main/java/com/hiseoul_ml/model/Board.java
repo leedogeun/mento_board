@@ -1,6 +1,5 @@
 package com.hiseoul_ml.model;
 
-import java.security.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +10,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "chez_board")
+//@Table(name = "chez_board")
+@Table(name = "board")
 @Getter
 @Setter
 @ToString
@@ -19,86 +19,34 @@ public class Board {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	private Integer no;
-	private String name;
-	private String email;
-	private String instance_yn;
-	private Timestamp write_date;
-	private Timestamp up_date;
-	private String active_yn;
-	private String permission;
-	private String auth;
-
-	public Integer getNo() {
-		return no;
+	private Integer boardno;
+	private String title;
+	private String content;
+	private String writer;
+	
+	public Integer getBoardno() {
+		return boardno;
 	}
-
-	public void setNo(Integer no) {
-		this.no = no;
+	public void setBoardno(Integer boardno) {
+		this.boardno = boardno;
 	}
-
-	public String getName() {
-		return name;
+	public String getTitle() {
+		return title;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-
-	public String getEmail() {
-		return email;
+	public String getContent() {
+		return content;
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setContent(String content) {
+		this.content = content;
 	}
-
-	public String getInstance_yn() {
-		return instance_yn;
+	public String getWriter() {
+		return writer;
 	}
-
-	public void setInstance_yn(String instance_yn) {
-		this.instance_yn = instance_yn;
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
-
-	public Timestamp getWrite_date() {
-		return write_date;
-	}
-
-	public void setWrite_date(Timestamp write_date) {
-		this.write_date = write_date;
-	}
-
-	public Timestamp getUp_date() {
-		return up_date;
-	}
-
-	public void setUp_date(Timestamp up_date) {
-		this.up_date = up_date;
-	}
-
-	public String getActive_yn() {
-		return active_yn;
-	}
-
-	public void setActive_yn(String active_yn) {
-		this.active_yn = active_yn;
-	}
-
-	public String getPermission() {
-		return permission;
-	}
-
-	public void setPermission(String permission) {
-		this.permission = permission;
-	}
-
-	public String getAuth() {
-		return auth;
-	}
-
-	public void setAuth(String auth) {
-		this.auth = auth;
-	}
-
+	
 }

@@ -24,7 +24,7 @@ public interface Ml_caseRepository extends JpaRepository<Ml_case, String> {
 	*https://dev.to/fabiothiroki/setup-spring-and-postgres-for-full-text-search-4n97
 	*/
 	
-	@Query("SELECT ml FROM tb_ml_case ml "
-			+ " WHERE CONCAT(ml.ml_case_uuid, ml.ml_case_region_uuid, ml.ml_case_region_uuid, ml.ml_case_cctv_uuid, ml.ml_case_biz_model_uuid) = :Uuid")
-	public List<Ml_case> findAllByUuid(@Param( "Uuid" )String Uuid);
+//	@Query("SELECT ml FROM tb_ml_case ml "
+//			+ " WHERE CONCAT(ml.ml_case_uuid, ml.ml_case_region_uuid, ml.ml_case_region_uuid, ml.ml_case_cctv_uuid, ml.ml_case_biz_model_uuid) = :Uuid")
+//	public List<Ml_case> findAllByUuid(@Param( "Uuid" )String Uuid);
 }
